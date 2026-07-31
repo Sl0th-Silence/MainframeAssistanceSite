@@ -1,0 +1,9 @@
+Basics of Jobs, keywords and creating a jobcard (This will be done using something other than work names, ie; STUDJMXX)
+A-Z are typically Shortest-longest jobs. It's specified by the OS or company but there seems to be defaults?
+Printer as well. 
+** The job card may need to stay out of this as it's system defined. **
+
+STEPS ***
+'//', 'EXEC', 'DD', for basic running of jobs. Mainly IBM Utilities that everyone has access to
+Once we get into those jobs, then we talk about parms, sysin, sysout, sysprint, etc.
+IDCAMS, IEFBR14, IBGENER(IEBDUP) etc.
