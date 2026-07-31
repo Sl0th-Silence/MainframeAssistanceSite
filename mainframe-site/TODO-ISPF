@@ -1,0 +1,76 @@
+We need to figure out what mainframe connection emulator we will be using but here will be the main and line commands/navigation
+PF1-PF18, PF19 ... are F1-F19, F19 ... Use shift for the next set of PF's after 9 but chances are, the defaults are the same
+Page up and Page down work as instructed for PF8 and PF9
+Using the numpad is great but not as expected. Num-1 goes to the end of the record, 7 goes back to command bar, tab to next input
+Stacking commands can be done by adding a ';' between commands. for example, start;3.4; <== This starts a new screen, then uses the input '3.4' which goes to search
+PF3 to go back a page, 
+PF4 to go back a bunch,
+PF5 to repeat a command, such as a find command in a cobol program.
+You should keep your datasets in a proper format, STUD.WORK.JM.COBOL(PROGONE) <== This would hold all of your cobol code, 
+You can have one for JCL(CNTL), SQL, Copybooks(TEXTLIB, SYSLIB, COPYLIB), JCL procedures(PROCLIB), etc.
+
+
+
+
+Primary Commands {
+                BOUNDS: To set the left and right bounds.
+                CANCEL: To cancel edit without saving the data.
+                CAPS: To set CAPS mode off or on.
+                CAPS ON: saves all the data in the dataset in Capitals.
+                CAPS OFF: leaves the data as typed.
+                CHANGE: To find and then change a specified character string.
+                COPY: To copy data from another member or sequential data set.
+                CREATE: To create a new member of a partitioned data set.
+                CUT: To copy or move data to a clipboard.
+                DISPLAY: This command is available only in Browse mode operations. The DISPLAY command 
+                        is used to specify the character to be displayed to represent invalid (non-displayable) 
+                        characters, and to specify whether or not carriage control characters are to be displayed.
+                DELETE: To delete excluded or no excluded lines from data being edited.
+                EDIT: To cause a recursive entry into edits. Edit brings the member for editing while 
+                        retaining the original member. You can go back to the original member with an END or CANCEL command.
+                END: To end the current Edit Session. Whether the data is saved or not depends on the profile setting 'AutoSave', which is discussed later.
+                EXCLUDE: To exclude lines those contain a specified character string.
+                FIND: To find a specified character string. Features are described in detail later in this chapter.
+                HEX: To set HEX mode off or on and to specify the hex display format.
+                HILITE: To set the enhanced and language sensitive colour settings.
+                MODEL: To copy a predefined model. A MODEL is a group of source statements and 
+                        optional notes that provide sample data for creating and editing dialogs. 
+                        The models contain prototype lines indicating the form of the requested dialog element, 
+                        parts of which you may overtype with application-specific data.
+                MOVE: To move (copy and delete) a member or sequential data set.
+                NULLS: To set NULLS mode off or on and to specify the type of nulls.
+                NUMBER: To set NUMBER mode on or off.
+                PASTE: To copy or move data from a clipboard.
+                RENUM: To set NUMBER mode on and renumber the data.
+                REPLACE: To replace a member or an entire sequential data set.
+                SAVE: To save the data without ending the edit session.
+                SORT: To perform sorting functions on the data being edited. Sorting can be done on columns, in ascending or descending sequence.
+                TABS: To set TABS mode off or on and to specify the logical tabs char.
+                UNDO: To "undo" (reverse) the last command you entered.
+                UNNUM: To set NUMBER mode off and blank out sequence numbers.
+}
+Line commands {
+                E: Edit Data Set
+                V: View Data Set
+                B: Browse Data Set
+                M: Display Member List
+                D: Delete Data Set
+                R: Rename Data Set
+                I: Data Set Information
+                S: Information (Short)
+                P: Print Data Set
+                C: Catalog Data Set
+                U: Uncatalog Data Set
+                Z: Compress Data Set
+                F: Free Unused Space
+                PX: Print Index Listing
+                RS: Reset
+                MO: Move
+                CO : Copy
+                RA: RefAdd
+                X: Exclude Data Set
+                NX: Unexclude Data Set
+                NXF: Unexclude First Data Set
+                NXL: Unexclude Last Data Set
+                = : Repeat Last Command
+}
