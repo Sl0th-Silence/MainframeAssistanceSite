@@ -5,9 +5,7 @@ export default function MainPage({header}) {
             <h2>"I became insane, with long intervals of horrible sanity." - Edgar Allan Poe</h2>
             <h3>Welcome to Mainframe</h3><hr/>
             <p>
-                Due to the college, who will remain nameless until I get annoyed during the writing of this intro, not doing their job and properly teaching this course
-                with the respect that it, and we, deserve, I am putting together a "Mainframe Guide" for those who don't need to understand the wording of IBM techs from the 70's. <br/>
-
+                Due to the difficult nature of mainframe learning and navigation, I am creating this course as a cookbook of assistance.<br>
                 This if for students who want to learn COBOL, JCL, ISPF, DB2, etc. without all of the baggage that comes with it. 
                 I am going to add in what I feel is important but this will act as a more comprehesible guide then that of IBM's site.<hr/>
             </p>
