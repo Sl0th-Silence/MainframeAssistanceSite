@@ -31,7 +31,7 @@ export default function Cobol({header})
         <p>There are different PIC usage clauses. This is basically how the characters or values are stored
             in memory. The three main ones I will talk about are DISPLAY, COMP and COMP-3.
         </p>
-        <ol>
+        <ol className="info">
             <li>
                 DISPLAY: This is the default. If you do not specify, it makes your usage clause 'DISPLAY'.<br/>
                 DISPLAY holds one character per byte of space. <br/> So for WS-NAME PIC X(03) DISPLAY VALUE 'JAY'. <br /> it

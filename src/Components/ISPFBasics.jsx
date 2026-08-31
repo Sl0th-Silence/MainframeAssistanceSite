@@ -9,24 +9,27 @@ export default function ISPFBasics({header})
             and ease of use. There are a few commands we will go over to make more sense of everything and whatever you do,
             do NOT change your keymapping or this will make no sense! <br /> <br />
         </p>
-        <h4>Primary Commands</h4>
+        <h2>Primary Commands</h2>
         <p>The primary commands are anything written to the main command line at the top of the screen. This can be either a 
            selector for the options below, such as the 'ISPF Primary Option Menu', or it could be a command line while adding
            or editing files, or even inside of a COBOL program.
         </p>
-        <img src="public/select-option.png" alt="selectOption" width="150px" height="50px"/>
-        <img src="public/Command-option.png" alt="commandOption" width="150px" height="50px"/>
-        <img src="public/Command-Cobol.png" alt="CobolOption" width="150px" height="150px"/>
+        <br />
+        <div className="img-container">
+            <img src="public/select-option.png" title="Select Option on main ISPF" width="20%"/>
+            <img src="public/Command-option.png" title="Command Option in Dataset or Program" width="40%"/>
+            <img src="public/Command-Cobol.png" title="Command Option inside Cobol program" width="20%"/>
+        </div>
         <hr />
         <p>The differences between the two option lines depend on which screen you are on. When working on a COBOL program or 
            searching a dataset, you can use the 'F' or 'FIND' command with a like of text to search the current data stream 
            for results. You can either write one word or define a specific string by using quotes.
         </p>
-        <img src="public/F-WS-PAGE-NUM.png" alt="F-WS-PAGE-NUM" width="150px" height="30px"/>
+        <img className="img-container" src="public/F-WS-PAGE-NUM.png" title="F WS-PAGE-NUM" width="50%"/>
 
         <p>They also are not case sensitive for searching.</p>
         
-        <img src="public/f-string.png" alt="f-string" width="150px" height="50px"/>
+        <img className="img-container" src="public/f-string.png" title="f 'string'" width="50%"/>
     </div>
     )
 }

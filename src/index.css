@@ -140,6 +140,24 @@ code {
   font-size: 250%;
 }
 
+.info h1, h2, h3, h4, p{
+  color: black;
+}
+
+.info p {
+  font-size: large;
+}
+
+.info ol {
+  color: #08060d;
+  background-color:#9ca3af;
+}
+
 .mainPage h2{
   padding-top: 1%;
+}
+
+.img-container:hover::after {
+  content: attr(title);
+  position: absolute;
 }
