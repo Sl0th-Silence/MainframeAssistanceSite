@@ -55,6 +55,11 @@ export default function MainPage({ header }) {
           <option value="/terms">Termonology</option>
         </select>
       </div>
+      <div style={{ fontSize: "10px" }}>
+        Font made from{" "}
+        <a href="http://www.onlinewebfonts.com/fonts">Web Fonts</a> is licensed
+        by CC BY 4.0
+      </div>
     </div>
   );
 }
