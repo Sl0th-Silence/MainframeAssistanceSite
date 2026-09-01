@@ -166,7 +166,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5%;
     border: 5% solid transparent;
@@ -187,26 +187,21 @@
   justify-content: space-between;
   align-items: center;
   background-color: hsla(236, 92%, 64%, 0.226);
-  border-radius: 5%;
-  border-style: dashed;
-  border-color: black;
   z-index: 1;
 }
-.header  {
+.header {
   text-align: center;
   padding: 1%;
 }
 
-.header 
-.title {
+.header .title {
   font-family: monospace;
   margin: auto;
   padding: 3%;
   text-decoration: underline;
 }
 
-.header
-select {
+.header select {
   appearance: none;
   cursor: cell;
 }
@@ -244,7 +239,6 @@ body {
   border-radius: 20%;
 }
 
-.header
-.title {
+.header .title {
   line-height: 110%;
 }

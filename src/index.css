@@ -1,8 +1,8 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
+  --text: #00ff00;
+  --text-h: white;
   --bg: #fff;
-  --border: #e5e4e7;
+  --border: black;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
   --accent-bg: rgba(170, 59, 255, 0.1);
@@ -11,8 +11,8 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
@@ -32,8 +32,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
+    --text: var(--text);
+    --text-h: var(--text-h);
     --bg: #16171d;
     --border: #2e303a;
     --code-bg: #1f2028;
@@ -43,7 +43,7 @@
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-      cursor: cell;
+    cursor: cell;
   }
 
   #social .button-icon {
@@ -51,13 +51,19 @@
   }
 }
 
+hr {
+  background-color: black;
+  height: 2px;
+}
+
 body {
   margin: 0;
 }
 
 #root {
+  background-color: black;
   width: auto;
-  max-width: auto;
+  max-width: 1080px;
   margin: 0 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
@@ -111,53 +117,111 @@ code {
   background: var(--code-bg);
 }
 
-.header
-.title
-{
-  @media (max-width: 1000px) {
-    font-size: 18px;
+.header .title {
+  color: var(--text-h);
+}
+
+.header .title {
+  @media (max-width: 1080px) {
+    font-size: 30px;
     line-height: 0.4;
+    color: var(--text-h);
   }
 }
 
-.header
-.navigation
-{
-  @media (max-width: 1000px) {
+.header .navigation {
+  @media (max-width: 1080px) {
     font-size: 15px;
     height: 50px;
     width: 25%;
+    border-radius: 25px;
   }
 }
 
-.header
-.ibmlogo {
-  width: 25%;
+.header .ibmlogo {
+  width: 15%;
   border-radius: 10%;
 }
 
-.info h1{
+.info h1 {
   font-size: 250%;
 }
 
-.info h1, h2, h3, h4, p{
-  color: black;
+/* Basic headers */
+.info h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--text);
 }
 
 .info p {
   font-size: large;
+  line-height: 1.7rem;
+  text-align: center;
+  padding: 0px 15px 0px 15px;
 }
 
-.info ol {
-  color: #08060d;
-  background-color:#9ca3af;
+/* General Header settings */
+h1,
+h2,
+h3 {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.152);
 }
 
-.mainPage h2{
+.list-info {
+  color: var(--text);
+  background-color: black;
+  font-size: large;
+  line-height: 1.7rem;
+  text-align: left;
+}
+
+.mainPage h2 {
   padding-top: 1%;
 }
 
 .img-container:hover::after {
   content: attr(title);
   position: absolute;
+}
+
+.cob-structure {
+  max-width: 1080px;
+  width: auto;
+  opacity: 80%;
+}
+
+.img-container {
+  padding: 1%;
+  max-width: 1080px;
+  width: auto;
+}
+
+@media (max-width: 1050px) {
+  .cob-structure {
+    padding: 1%;
+    max-width: 1050px;
+    width: 85vw;
+    opacity: 80%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .img-container {
+    padding: 1%;
+    max-width: 1050px;
+    width: 85vw;
+  }
+}
+
+.warning-header {
+  color: red;
+  font-size: 200%;
+  text-shadow: 2px 2px 2px black;
+}
+
+.period-color {
+  color: red;
 }
