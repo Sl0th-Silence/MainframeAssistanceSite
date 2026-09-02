@@ -4,6 +4,7 @@ import JCL from "./Components/JCL";
 import AdvancedCobol from "./Components/AdvancedCobol";
 import Cobol from "./Components/Cobol";
 import HeaderDiv from "./Components/Header";
+import ISPFSearch from "./Components/ISPFSearch";
 import ISPFBasics from "./Components/ISPFBasics";
 import MainframeBasics from "./Components/MainframeBasics";
 import MainPage from "./Components/MainPage";
@@ -19,19 +20,52 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<MainPage header={<HeaderDiv />} />} />
           <Route
-            path="/mainframeBasics"
-            element={<MainframeBasics header={<HeaderDiv />} />}
+            path="/"
+            element={
+              <MainPage header={<HeaderDiv />} ISPFSearch={<ISPFSearch />} />
+            }
           />
-          <Route path="/ispf" element={<ISPFBasics header={<HeaderDiv />} />} />
-          <Route path="/cobol" element={<Cobol header={<HeaderDiv />} />} />
           <Route
-            path="/advancedCobol"
-            element={<AdvancedCobol header={<HeaderDiv />} />}
+            path="/mainframebasics"
+            element={
+              <MainframeBasics
+                header={<HeaderDiv />}
+                ISPFSearch={<ISPFSearch />}
+              />
+            }
           />
-          <Route path="/jcl" element={<JCL header={<HeaderDiv />} />} />
-          <Route path="/terms" element={<Terms header={<HeaderDiv />} />} />
+          <Route
+            path="/ispf"
+            element={
+              <ISPFBasics header={<HeaderDiv />} ISPFSearch={<ISPFSearch />} />
+            }
+          />
+          <Route
+            path="/cobol"
+            element={
+              <Cobol header={<HeaderDiv />} ISPFSearch={<ISPFSearch />} />
+            }
+          />
+          <Route
+            path="/advancedcobol"
+            element={
+              <AdvancedCobol
+                header={<HeaderDiv />}
+                ISPFSearch={<ISPFSearch />}
+              />
+            }
+          />
+          <Route
+            path="/jcl"
+            element={<JCL header={<HeaderDiv />} ISPFSearch={<ISPFSearch />} />}
+          />
+          <Route
+            path="/terms"
+            element={
+              <Terms header={<HeaderDiv />} ISPFSearch={<ISPFSearch />} />
+            }
+          />
         </Routes>
       </Router>
     </>

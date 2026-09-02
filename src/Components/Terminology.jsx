@@ -1,3 +1,8 @@
-export default function Terms({ header }) {
-  return <div className="info">{header}</div>;
+export default function Terms({ header, ISPFSearch }) {
+  return (
+    <div className="info">
+      {header}
+      {ISPFSearch}
+    </div>
+  );
 }

@@ -21,14 +21,13 @@ export default function HeaderDiv() {
         value={selectedPage}
       >
         <option value="/">Home</option>
-        <option value="/mainframeBasics">Mainframe Basics</option>
+        <option value="/mainframebasics">Mainframe Basics</option>
         <option value="/ispf">ISPF</option>
         <option value="/cobol">COBOL</option>
-        <option value="/advancedCobol">Advanced COBOL</option>
+        <option value="/advancedcobol">Advanced COBOL</option>
         <option value="/jcl">JCL</option>
         <option value="/terms">Termonology</option>
       </select>
-
       <h1 className="title">
         Mainframe for Dummies
         <br />& College Students

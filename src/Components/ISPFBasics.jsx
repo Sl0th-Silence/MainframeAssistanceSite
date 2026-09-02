@@ -1,7 +1,8 @@
-export default function ISPFBasics({ header }) {
+export default function ISPFBasics({ header, ISPFSearch }) {
   return (
     <div className="info">
       {header}
+      {ISPFSearch}
       <h1>ISPF Basics</h1>
       <h2>ISPF Main Screen</h2>
       <p>

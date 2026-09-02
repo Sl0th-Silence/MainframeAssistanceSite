@@ -1,3 +1,8 @@
-export default function AdvancedCobol({ header }) {
-  return <div className="info">{header}</div>;
+export default function AdvancedCobol({ header, ISPFSearch }) {
+  return (
+    <div className="info">
+      {header}
+      {ISPFSearch}
+    </div>
+  );
 }

@@ -229,3 +229,36 @@ h3 {
 #keyword {
   color: red;
 }
+
+#keyword-ul {
+  color: red;
+  text-decoration: 1px solid underline red;
+  text-underline-offset: 3px;
+}
+
+#ispf-search {
+  background-color: black;
+  color: var(--text);
+  border: none;
+  border-bottom: 2px solid var(--text);
+  outline: none;
+  transition: all 0.3s ease;
+  max-width: 900px;
+  width: 75vw;
+  padding-bottom: 0%;
+  padding-top: 0.5%;
+  font-size: 17px;
+}
+
+#input-label {
+  font-size: 17px;
+  padding-bottom: 0%;
+}
+
+#ispf-search-div {
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: nowrap;
+}

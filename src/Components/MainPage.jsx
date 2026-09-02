@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-export default function MainPage({ header }) {
+export default function MainPage({ header, ISPFSearch }) {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -20,7 +20,7 @@ export default function MainPage({ header }) {
         Poe
       </h2>
       <h3>Welcome to Mainframe</h3>
-      <hr />
+      <br />
       <p>
         Due to the difficult nature of mainframe learning and navigation, I am
         creating this course as a cookbook of assistance.
@@ -30,31 +30,13 @@ export default function MainPage({ header }) {
         I feel is important but this will act as a more comprehesible guide then
         that of IBM's site.
       </p>
-      <hr />
       <br />
       <br />
-      <h1>Getting Started</h1>
       <h3>
-        Select one of the options from the drop down menu in the top left or
-        select an option below to get started!
+        Type a page name below to get started or 'help' for a list of commands
+        and pages.
       </h3>
-
-      <div>
-        <select
-          name="PageSelectHome"
-          id="PageSelectHome"
-          onChange={handleChange}
-          value={selectedPage}
-        >
-          <option value="/">Home</option>
-          <option value="/mainframeBasics">Mainframe Basics</option>
-          <option value="/ispf">ISPF</option>
-          <option value="/cobol">COBOL</option>
-          <option value="/advancedCobol">Advanced COBOL</option>
-          <option value="/jcl">JCL</option>
-          <option value="/terms">Termonology</option>
-        </select>
-      </div>
+      {ISPFSearch}
       <div style={{ fontSize: "10px" }}>
         Font made from{" "}
         <a href="http://www.onlinewebfonts.com/fonts">Web Fonts</a> is licensed
