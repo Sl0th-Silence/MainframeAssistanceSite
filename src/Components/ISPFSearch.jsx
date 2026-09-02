@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function ISPFSearch() {
+  //Search
+  const [pageText, setPageText] = useState("");
   const [value, setValue] = useState("");
   const [targetPage, setTargetPage] = useState("");
   const navigate = useNavigate();
@@ -17,14 +19,22 @@ export default function ISPFSearch() {
     "jcl",
     "terms",
   ];
+  //Search
+  useEffect(() => {
+    const text = document.body.innerText;
+    setPageText(text.toLowerCase());
+  }, []);
+
   //Is Text Hidden?
   const handleIsHidden = (state) => {
     setIsHidden(state);
   };
+
   //Is the command hidden?
   const handleIsHiddenCommand = (state) => {
     setIsHiddenCommand(state);
   };
+
   //Handle submitting of the command
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -38,6 +48,12 @@ export default function ISPFSearch() {
       } else if (targetPageClean.toLowerCase().trim() === "help") {
         handleIsHiddenCommand(false);
         handleIsHidden(false);
+      } else if (targetPageClean[0].toLowerCase().trim() === "f") {
+        if (pageText.includes(targetPageClean.slice(1).toLowerCase().trim())) {
+          console.log(targetPageClean + "found");
+        } else {
+          console.log(targetPageClean + "not found");
+        }
       } else if (targetPageClean.toLowerCase().trim() === "cls") {
         handleIsHiddenCommand(false);
         handleIsHidden(true);
@@ -88,7 +104,7 @@ export default function ISPFSearch() {
           </span>
           <br />
           <span hidden={isHidden}>==&gt; Commands: 'HELP', 'CLS'</span> <br />
-          <span style={{ display: `${isHidden} ? 'none' : 'block` }}>
+          <span hidden={isHidden}>
             ==&gt; Pages: 'HOME, ISPF, COBOL, ADVANCEDCOBOL, JCL, TERMS'
           </span>
           <br />
