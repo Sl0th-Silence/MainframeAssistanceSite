@@ -30,13 +30,17 @@ export default function ISPFSearch() {
     e.preventDefault();
     setValue("");
     const targetPageClean = targetPage.replace(/\s/g, "");
-    setCurrentCommand(targetPage);
+    setCurrentCommand(targetPage.toUpperCase());
     if (targetPageClean.trim() !== "") {
       if (pages.includes(targetPageClean.toLowerCase().trim())) {
+        handleIsHidden(true);
         navigate(`/${targetPageClean.toLowerCase().trim()}`);
       } else if (targetPageClean.toLowerCase().trim() === "help") {
+        handleIsHiddenCommand(false);
         handleIsHidden(false);
       } else if (targetPageClean.toLowerCase().trim() === "cls") {
+        handleIsHiddenCommand(false);
+        handleIsHidden(true);
         setCurrentCommand("");
       } else {
         handleIsHiddenCommand(false);
@@ -60,7 +64,7 @@ export default function ISPFSearch() {
       <div id="ispf-search-div">
         <form action="" onSubmit={handleSubmit}>
           <label id="input-label" htmlFor="ispf-search">
-            COMMAND==&gt;
+            COMMAND ==&gt;
           </label>
           <input
             value={value}
@@ -75,13 +79,16 @@ export default function ISPFSearch() {
         <p
           style={{
             textAlign: "left",
+            padding: "0% 2% 0% 2%",
           }}
         >
           ==&gt; <span hidden={isHiddenCommand}>{currentCommand}</span> <br />
-          <span hidden={isHidden}>==&gt;ALL COMMANDS ARE CASE-INSENSITIVE</span>
-          <br />
-          <span hidden={isHidden}>==&gt;Commands: 'HELP'</span> <br />
           <span hidden={isHidden}>
+            ==&gt; ALL COMMANDS ARE CASE-INSENSITIVE
+          </span>
+          <br />
+          <span hidden={isHidden}>==&gt; Commands: 'HELP', 'CLS'</span> <br />
+          <span style={{ display: `${isHidden} ? 'none' : 'block` }}>
             ==&gt; Pages: 'HOME, ISPF, COBOL, ADVANCEDCOBOL, JCL, TERMS'
           </span>
           <br />
