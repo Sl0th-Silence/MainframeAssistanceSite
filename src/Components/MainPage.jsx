@@ -5,13 +5,6 @@ export default function MainPage({ header, ISPFSearch }) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [selectedPage, setSelectedPage] = useState(location.pathname);
-
-  const handleChange = (e) => {
-    setSelectedPage(e.target.value);
-    navigate(e.target.value);
-  };
-
   return (
     <div className="mainPage">
       {header}

@@ -11,7 +11,6 @@ export default function ISPFSearch() {
   const [isHiddenCommand, setIsHiddenCommand] = useState(true);
   const [currentCommand, setCurrentCommand] = useState("");
   const pages = [
-    "home",
     "cobol",
     "ispf",
     "advancedcobol",
@@ -45,6 +44,9 @@ export default function ISPFSearch() {
       if (pages.includes(targetPageClean.toLowerCase().trim())) {
         handleIsHidden(true);
         navigate(`/${targetPageClean.toLowerCase().trim()}`);
+      } else if (targetPageClean.toLowerCase().trim() === "home") {
+        handleIsHidden(true);
+        navigate("/");
       } else if (targetPageClean.toLowerCase().trim() === "help") {
         handleIsHiddenCommand(false);
         handleIsHidden(false);
