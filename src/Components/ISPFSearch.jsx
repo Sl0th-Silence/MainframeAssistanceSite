@@ -10,6 +10,7 @@ export default function ISPFSearch() {
   const [isHidden, setIsHidden] = useState(true);
   const [isHiddenCommand, setIsHiddenCommand] = useState(true);
   const [currentCommand, setCurrentCommand] = useState("");
+  const [curText, setCurText] = useState("");
   const pages = [
     "cobol",
     "ispf",
@@ -18,11 +19,10 @@ export default function ISPFSearch() {
     "jcl",
     "terms",
   ];
-  //Search
-  useEffect(() => {
-    const text = document.body.innerText;
-    setPageText(text.toLowerCase());
-  }, []);
+  //Text Change
+  const handleTextChange = (e) => {
+    setCurText(e.target.value);
+  };
 
   //Is Text Hidden?
   const handleIsHidden = (state) => {
@@ -74,6 +74,8 @@ export default function ISPFSearch() {
   //Handle changing the value to uppercase
   const handleChange = (e) => {
     setValue(e.target.value.toUpperCase());
+
+    console.log(e.target.value);
     setTargetPage(e.target.value);
   };
 
@@ -85,13 +87,28 @@ export default function ISPFSearch() {
             COMMAND ==&gt;
           </label>
           <input
-            value={value}
-            onChange={handleChange}
+            value={curText}
+            onChange={handleTextChange}
             type="text"
             id="ispf-search"
             autoFocus
           />
         </form>
+      </div>
+      <div className="text-display">
+        {curText.split("").map((char, index) => {
+          const isLastChar = index === curText.length - 1;
+
+          return (
+            <span
+              key={index}
+              className={isLastChar ? "current-char" : "normal-char"}
+            >
+              {char === " " ? "\u00a0" : char}
+            </span>
+          );
+        })}
+        <span className="caret">|</span>
       </div>
       <div>
         <p
