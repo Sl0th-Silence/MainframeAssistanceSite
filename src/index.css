@@ -261,12 +261,10 @@ h3 {
   display: grid;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   flex-wrap: nowrap;
 }
 
 /* Font typing */
-
 #ispf-search {
   position: absolute;
   top: 0;
@@ -279,10 +277,11 @@ h3 {
 }
 
 .text-display {
-  border: 1px solid green;
+  border: none;
+  border-bottom: 2px solid var(--text);
+  width: 75vw;
   font-size: 18px;
-  display: flex;
-  align-items: center;
+  text-align: left;
   pointer-events: none;
   background: black;
 }
@@ -293,7 +292,8 @@ h3 {
 }
 
 .current-char {
-  font-size: 32px;
+  font-size: 25px;
+  transition: font-size 0.1s ease;
 }
 
 .caret {

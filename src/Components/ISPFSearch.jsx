@@ -38,8 +38,8 @@ export default function ISPFSearch() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setValue("");
-    const targetPageClean = targetPage.replace(/\s/g, "");
-    setCurrentCommand(targetPage.toUpperCase());
+    const targetPageClean = curText.replace(/\s/g, "");
+    setCurrentCommand(curText.toUpperCase());
     if (targetPageClean.trim() !== "") {
       if (pages.includes(targetPageClean.toLowerCase().trim())) {
         handleIsHidden(true);
@@ -63,7 +63,7 @@ export default function ISPFSearch() {
       } else {
         handleIsHiddenCommand(false);
         setCurrentCommand(
-          targetPage.toUpperCase() +
+          curText.toUpperCase() +
             " is not a valid command. Type 'HELP' for more information",
         );
       }
