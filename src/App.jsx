@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <Router>
-        <BrowserRouter basename="https://github.com/Sl0th-Silence/MainframeAssistanceSite"></BrowserRouter>
+        <BrowserRouter basename="https://sl0th-silence.github.io/MainframeAssistanceSite/"></BrowserRouter>
         <Routes>
           <Route
             path="/"
