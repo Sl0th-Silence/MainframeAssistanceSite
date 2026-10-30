@@ -18,8 +18,7 @@ import {
 function App() {
   return (
     <>
-      <Router>
-        <BrowserRouter basename="/MainframeAssistanceSite/"></BrowserRouter>
+      <Router basename="/MainframeAssistanceSite/">
         <Routes>
           <Route
             path="/"
