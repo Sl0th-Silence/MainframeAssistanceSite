@@ -19,6 +19,7 @@ function App() {
   return (
     <>
       <Router>
+        <BrowserRouter basename="https://github.com/Sl0th-Silence/MainframeAssistanceSite"></BrowserRouter>
         <Routes>
           <Route
             path="/"
