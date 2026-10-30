@@ -8,12 +8,7 @@ import ISPFSearch from "./Components/ISPFSearch";
 import ISPFBasics from "./Components/ISPFBasics";
 import MainframeBasics from "./Components/MainframeBasics";
 import MainPage from "./Components/MainPage";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
