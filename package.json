@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "github.io",
+  "homepage": "https://sl0th-silence.github.io/MainframeAssistanceSite/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
