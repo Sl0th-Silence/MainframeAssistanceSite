@@ -23,17 +23,17 @@ export default function ISPFBasics({ header, ISPFSearch }) {
       <br />
       <div className="img-container">
         <img
-          src="public/ISPF-images/select-option.png"
+          src="/MainframeAssistanceSite/ISPF-images/select-option.png"
           title="Select Option on main ISPF"
           width="20%"
         />
         <img
-          src="public/ISPF-images/Command-option.png"
+          src="/MainframeAssistanceSite/ISPF-images/Command-option.png"
           title="Command Option in Dataset or Program"
           width="40%"
         />
         <img
-          src="public/ISPF-images/Command-Cobol.png"
+          src="/MainframeAssistanceSite/ISPF-images/Command-Cobol.png"
           title="Command Option inside Cobol program"
           width="20%"
         />
@@ -48,7 +48,7 @@ export default function ISPFBasics({ header, ISPFSearch }) {
       </p>
       <img
         className="img-container"
-        src="public/F-WS-PAGE-NUM.png"
+        src="/MainframeAssistanceSite/F-WS-PAGE-NUM.png"
         title="F WS-PAGE-NUM"
         width="50%"
       />
@@ -57,7 +57,7 @@ export default function ISPFBasics({ header, ISPFSearch }) {
 
       <img
         className="img-container"
-        src="public/f-string.png"
+        src="/MainframeAssistanceSite/f-string.png"
         title="f 'string'"
         width="50%"
       />

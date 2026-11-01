@@ -37,7 +37,7 @@ export default function Cobol({ header, ISPFSearch }) {
         <br />
         <img
           className="cob-structure"
-          src="public/COBOL-images/cobol-structure.png"
+          src="/MainframeAssistanceSite/COBOL-images/cobol-structure.png"
           title="It can be scary at first but we are scarier!"
         />
       </p>
@@ -96,7 +96,7 @@ export default function Cobol({ header, ISPFSearch }) {
         <span id="keyword">PIC</span> clause. An example of this is:
         <img
           className="img-container"
-          src="public\COBOL-images\basic-pic-x.png"
+          src="/MainframeAssistanceSite/COBOL-images/basic-pic-x.png"
           title="Basic alphanumeric variable"
         />
         <br />
@@ -127,7 +127,7 @@ export default function Cobol({ header, ISPFSearch }) {
             The remaining gets padded with spaces. <br />
             <img
               className="img-container"
-              src="public\COBOL-images\basic-pic-x.png"
+              src="/MainframeAssistanceSite/COBOL-images/basic-pic-x.png"
               title="Basic PIC clause defaults to DISPLAY"
             />
           </li>
@@ -144,7 +144,7 @@ export default function Cobol({ header, ISPFSearch }) {
             signs the value and makes it a signed numeric value. <br />
             <img
               className="img-container"
-              src="public\COBOL-images\PIC-whole-group.png"
+              src="/MainframeAssistanceSite/COBOL-images/PIC-whole-group.png"
               title="Giving whole group a COMP usage clause"
             />
           </li>
@@ -160,7 +160,7 @@ export default function Cobol({ header, ISPFSearch }) {
             <br />
             <img
               className="img-container"
-              src="public\COBOL-images\comp-3-v99.png"
+              src="/MainframeAssistanceSite/COBOL-images/comp-3-v99.png"
               title="With a signed comp-3, you can declare value as positive or negative"
             />
           </li>

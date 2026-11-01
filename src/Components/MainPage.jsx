@@ -30,7 +30,7 @@ export default function MainPage({ header, ISPFSearch }) {
         and pages.
       </h3>
       {ISPFSearch}
-      <div style={{ fontSize: "10px" }}>
+      <div style={{ fontSize: "10px", position: "absolute", bottom: "0", paddingLeft: "50px"}}>
         Font made from{" "}
         <a href="http://www.onlinewebfonts.com/fonts">Web Fonts</a> is licensed
         by CC BY 4.0

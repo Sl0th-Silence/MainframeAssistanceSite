@@ -256,19 +256,22 @@ h3 {
   padding-bottom: 0%;
 }
 
-#ispf-search-div {
-  padding: 0% 2% 0% 2%;
-  display: grid;
+.ispf-input-container {
+  display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
+  gap: 10px;
 }
 
-/* Font typing */
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  min-width: 300px;
+  text-align: left;
+}
+
 #ispf-search {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -277,13 +280,16 @@ h3 {
 }
 
 .text-display {
-  border: none;
-  border-bottom: 2px solid var(--text);
-  width: 75vw;
-  font-size: 18px;
-  text-align: left;
-  pointer-events: none;
-  background: black;
+  white-space: pre;
+  font-family: monospace;
+  font-size: 16px;
+  min-height: 20px;
+}
+
+.info-box {
+  margin: auto;
+  min-height: 0%;
+  max-height: auto;
 }
 
 .normal-char {

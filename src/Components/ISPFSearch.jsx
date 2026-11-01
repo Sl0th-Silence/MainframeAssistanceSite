@@ -21,7 +21,7 @@ export default function ISPFSearch() {
   ];
   //Text Change
   const handleTextChange = (e) => {
-    setCurText(e.target.value);
+    setCurText(e.target.value.toUpperCase());
   };
 
   //Is Text Hidden?
@@ -36,30 +36,42 @@ export default function ISPFSearch() {
 
   //Handle submitting of the command
   const handleSubmit = (e) => {
+    console.log("Submitted")
     e.preventDefault();
-    setValue("");
-    const targetPageClean = curText.replace(/\s/g, "");
-    setCurrentCommand(curText.toUpperCase());
+    setCurText("");
+    
+    let targetPageClean = curText.replace(/\s/g, "");
+    targetPageClean = targetPageClean.toLowerCase().trim();
+
+    console.log(targetPageClean)
+    setCurrentCommand(curText);
+    
     if (targetPageClean.trim() !== "") {
-      if (pages.includes(targetPageClean.toLowerCase().trim())) {
+      if (pages.includes(targetPageClean)) {
         handleIsHidden(true);
-        navigate(`/${targetPageClean.toLowerCase().trim()}`);
-      } else if (targetPageClean.toLowerCase().trim() === "home") {
+        navigate(`/${targetPageClean}`);
+
+      } else if (targetPageClean === "home") {
         handleIsHidden(true);
         navigate("/");
-      } else if (targetPageClean.toLowerCase().trim() === "help") {
+
+      } else if (targetPageClean === "help") {
         handleIsHiddenCommand(false);
         handleIsHidden(false);
-      } else if (targetPageClean[0].toLowerCase().trim() === "f") {
-        if (pageText.includes(targetPageClean.slice(1).toLowerCase().trim())) {
+
+      } else if (targetPageClean[0] === "f") {
+        if (pageText.includes(targetPageClean.slice(1))) {
           console.log(targetPageClean + "found");
+
         } else {
           console.log(targetPageClean + "not found");
         }
-      } else if (targetPageClean.toLowerCase().trim() === "cls") {
+
+      } else if (targetPageClean === "cls") {
         handleIsHiddenCommand(false);
         handleIsHidden(true);
         setCurrentCommand("");
+
       } else {
         handleIsHiddenCommand(false);
         setCurrentCommand(
@@ -71,30 +83,26 @@ export default function ISPFSearch() {
       setCurrentCommand("Please enter a command");
     }
   };
-  //Handle changing the value to uppercase
-  const handleChange = (e) => {
-    setValue(e.target.value.toUpperCase());
-
-    console.log(e.target.value);
-    setTargetPage(e.target.value);
-  };
 
   return (
-    <div>
-      <div id="ispf-search-div">
-        <form action="" onSubmit={handleSubmit}>
-          <label id="input-label" htmlFor="ispf-search">
-            COMMAND ==&gt;
-          </label>
-          <input
-            value={curText}
-            onChange={handleTextChange}
-            type="text"
-            id="ispf-search"
-            autoFocus
-          />
-        </form>
-      </div>
+<div>
+  <div className="ispf-input-container">
+    <label id="input-label" htmlFor="ispf-search">
+      COMMAND ==&gt;
+    </label>
+
+    <div className="input-wrapper">
+      <form onSubmit={handleSubmit} autoComplete="off">
+        <input
+          value={curText}
+          onChange={handleTextChange}
+          type="text"
+          id="ispf-search"
+          autoFocus
+          autoComplete="off"
+        />
+      </form>
+
       <div className="text-display">
         {curText.split("").map((char, index) => {
           const isLastChar = index === curText.length - 1;
@@ -110,25 +118,25 @@ export default function ISPFSearch() {
         })}
         <span className="caret">|</span>
       </div>
-      <div>
-        <p
-          style={{
-            textAlign: "left",
-            padding: "0% 2% 0% 2%",
-          }}
-        >
-          ==&gt; <span hidden={isHiddenCommand}>{currentCommand}</span> <br />
-          <span hidden={isHidden}>
-            ==&gt; ALL COMMANDS ARE CASE-INSENSITIVE
-          </span>
-          <br />
-          <span hidden={isHidden}>==&gt; Commands: 'HELP', 'CLS'</span> <br />
-          <span hidden={isHidden}>
-            ==&gt; Pages: 'HOME, ISPF, COBOL, ADVANCEDCOBOL, JCL, TERMS'
-          </span>
-          <br />
-        </p>
-      </div>
     </div>
+  </div>
+    <div className="info-box">
+      <p style={{textAlign: "left", padding: "0% 2% 0% 2%"}}>
+        <span hidden={isHiddenCommand}>{currentCommand}</span> <br />
+        <span hidden={isHidden}>
+          ==&gt; ALL COMMANDS ARE CASE-INSENSITIVE
+        </span>
+
+        <br />
+
+        <span hidden={isHidden}>==&gt; Commands: 'HELP', 'CLS'</span> <br />
+        <span hidden={isHidden}>
+          ==&gt; Pages: 'HOME, ISPF, COBOL, ADVANCEDCOBOL, JCL, TERMS'
+        </span>
+        <br />
+      </p>
+    </div>
+
+</div>
   );
 }
