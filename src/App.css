@@ -189,6 +189,7 @@
   background-color: hsla(236, 92%, 64%, 0.226);
   z-index: 1;
 }
+
 .header {
   text-align: center;
   padding: 1%;
@@ -242,3 +243,4 @@ body {
 .header .title {
   line-height: 110%;
 }
+

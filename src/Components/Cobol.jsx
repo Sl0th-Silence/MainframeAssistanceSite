@@ -3,7 +3,7 @@ export default function Cobol({ header, ISPFSearch }) {
     <div className="info">
       {header}
       {ISPFSearch}
-      <h1>What is COBOL ?</h1>
+      <h1 style={{textDecoration: "underline"}}>What is COBOL ?</h1>
       <h3>COBOL stands for 'CO'mmon 'B'usiness 'O'riented 'L'anguage</h3>
 
       <p>
@@ -26,7 +26,7 @@ export default function Cobol({ header, ISPFSearch }) {
       <h2>A Basic Refresher</h2>
       <hr />
       {/* SECTIONS */}
-      <h1 style={{ textAlign: "left", padding: "2%" }}>The COBOL Program:</h1>
+      <h1 id="header-h1">The COBOL Program:</h1>
       <p>
         There are multiple chunks that make up a COBOL program. These are broken
         down into the following: <br />
@@ -76,7 +76,7 @@ export default function Cobol({ header, ISPFSearch }) {
       </p>
       <hr />
       {/* VARIABLES */}
-      <h1 style={{ textAlign: "left", padding: "2%" }}>Variables:</h1>
+      <h1 id="header-h1">Variables:</h1>
       <ul style={{ textAlign: "left" }}>
         <li>
           <span id="keyword">PIC</span> X &nbsp;- Alphanumeric
@@ -168,7 +168,7 @@ export default function Cobol({ header, ISPFSearch }) {
       </div>
 
       <hr />
-      <h1 style={{ textAlign: "left", padding: "2%" }}>Variables:</h1>
+      <h1 id="header-h1">Variables:</h1>
     </div>
   );
 }
