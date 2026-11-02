@@ -120,8 +120,8 @@ code {
   background: var(--code-bg);
 }
 
-.header .title {
-  color: var(--text-h);
+.header {
+  height: 12rem;
 }
 
 .header .title {
@@ -142,7 +142,6 @@ code {
 }
 
 .header .ibmlogo {
-  width: 15%;
   border-radius: 10%;
 }
 
@@ -265,7 +264,7 @@ h3 {
 .input-wrapper {
   position: relative;
   display: inline-block;
-  min-width: 300px;
+  min-width: 75vw;
   text-align: left;
 }
 

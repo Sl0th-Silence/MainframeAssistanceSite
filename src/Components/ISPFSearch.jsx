@@ -102,7 +102,6 @@ export default function ISPFSearch() {
           autoComplete="off"
         />
       </form>
-
       <div className="text-display">
         {curText.split("").map((char, index) => {
           const isLastChar = index === curText.length - 1;
@@ -120,6 +119,7 @@ export default function ISPFSearch() {
       </div>
     </div>
   </div>
+  <hr />
     <div className="info-box">
       <p style={{textAlign: "left", padding: "0% 2% 0% 2%"}}>
         <span hidden={isHiddenCommand}>{currentCommand}</span> <br />
